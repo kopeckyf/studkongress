@@ -1,0 +1,20 @@
+\documentclass{studkongress}
+\bibliography{bibliography.bib}
+\input{hyphenation}
+\begin{document}
+\frontmatter
+\input{titling}
+\pagestyle{contents}
+\begin{KeepFromToc}\tableofcontents\end{KeepFromToc}
+\cleardoublepage
+\pagestyle{plain}
+\includepaper{papers/preface}
+\mainmatter
+\includepaper{papers/chapter}
+\backmatter
+\renewcommand*{\afterchaptertitle}{%
+	\thispagestyle{intropage}
+	\vskip\afterchapskip}
+\pagestyle{bibliography}
+{\raggedright\printbibliography}
+\end{document}
